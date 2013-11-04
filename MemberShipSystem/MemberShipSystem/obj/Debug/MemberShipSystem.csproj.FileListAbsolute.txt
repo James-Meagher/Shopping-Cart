@@ -1,0 +1,7 @@
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\bin\MemberShipSystem.dll
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\bin\MemberShipSystem.pdb
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\bin\EntityFramework.dll
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\bin\EntityFramework.xml
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\obj\Debug\MemberShipSystem.csprojResolveAssemblyReference.cache
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\obj\Debug\MemberShipSystem.dll
+C:\Users\James\Documents\Work\Tutorial Code\MemberShipEF\MembershipYouTube\MemberShipSystem\MemberShipSystem\obj\Debug\MemberShipSystem.pdb

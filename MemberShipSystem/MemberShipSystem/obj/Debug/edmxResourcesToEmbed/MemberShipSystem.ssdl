@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MemberShipSystem.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MemberShipSystemStoreContainer">
+    <EntitySet Name="Users" EntityType="MemberShipSystem.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orders" EntityType="MemberShipSystem.Store.Orders" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Products" EntityType="MemberShipSystem.Store.Products" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SecQuestion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SecAnswer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PrevOrder" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserType" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Prices" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ProductInfo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="true" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Details" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AmtVoted" Type="int" Nullable="false" />
+    <Property Name="Score" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Nullable="false" />
+  </EntityType>
+</Schema>

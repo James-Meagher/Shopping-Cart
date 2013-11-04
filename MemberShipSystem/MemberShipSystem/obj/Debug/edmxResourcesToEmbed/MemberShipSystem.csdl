@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MemberShipSystem" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="MembershipSystemContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="MemberShipSystem.User" />
+    <EntitySet Name="Orders" EntityType="MemberShipSystem.Order" />
+    <EntitySet Name="Products" EntityType="MemberShipSystem.Product" />
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Password" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="false" />
+    <Property Type="String" Name="SecQuestion" Nullable="false" />
+    <Property Type="String" Name="SecAnswer" Nullable="false" />
+    <Property Type="String" Name="PrevOrder" Nullable="false" />
+    <Property Type="MemberShipSystem.MemberPrivilege" Name="UserType" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" />
+  </EntityType>
+  <EnumType Name="MemberPrivilege">
+    <Member Name="Standard" Value="1" />
+    <Member Name="Silver" Value="2" />
+    <Member Name="Gold" Value="3" />
+  </EnumType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Type="Int32" Name="OrderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Prices" Nullable="false" />
+    <Property Type="String" Name="ProductInfo" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="true" />
+    <Property Type="DateTime" Name="Date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Type="Int32" Name="ProductId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" />
+    <Property Type="String" Name="Details" Nullable="false" />
+    <Property Type="Int32" Name="AmtVoted" Nullable="false" />
+    <Property Type="Int32" Name="Score" Nullable="false" />
+    <Property Type="Decimal" Name="Price" Nullable="false" />
+  </EntityType>
+</Schema>
